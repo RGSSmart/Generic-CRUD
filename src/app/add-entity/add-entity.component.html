@@ -1,0 +1,45 @@
+<h1> Stranica za dodavanje novih entita</h1>
+
+<div>
+    Naziv: <input [formControl]="nameControl">
+    <button (click)="Add()" [disabled]="CanSubmit()"> Dodaj </button>
+</div>
+<h3> Trenutno u bazi ima</h3>
+<p *ngIf="item_list.length === 0"> Nema nista unutra </p>
+<table *ngIf="item_list.length != 0">
+    <th>NAZIV</th>
+    <tr id="entity" *ngFor="let item of item_list">
+        <td id="id_col"> {{item.id}}</td>
+        <td id="name_col"> {{item.name}}</td>
+        <td class="action_col">
+            <button > Prikaz </button>
+        </td>
+        <td class="action_col">
+            <button (click)="Update(content,item)"> Izmeni </button>
+        </td>
+        <td class="action_col">
+            <button (click)="Delete(item.id)"> X </button>
+        </td>
+    </tr>
+</table>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="dateOfBirth">Izmeni ime</label>
+          <div class="input-group">
+            <input id="dateOfBirth" class="form-control" [formControl]="entityName" >            
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    </div>

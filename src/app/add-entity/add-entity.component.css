@@ -1,0 +1,29 @@
+table,td,tr {
+    width: 100%;
+    border: 1px black solid;
+}
+#id_col, .action_col{
+    width: 20%;
+}
+#entity {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #entity td, #entity th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #entity tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #entity tr:hover {background-color: #ddd;}
+  
+  #entity th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
