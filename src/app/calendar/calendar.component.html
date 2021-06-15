@@ -1,0 +1,25 @@
+<div class="content">
+    <h1> CALENDAR</h1>
+
+    <button (click)="previousMonth()"> Prev </button>
+    {{ CURRENT_MONTH}}
+    <button (click)="nextMonth()"> Next </button>
+    <div class="container">
+        <table>
+            <tr *ngFor="let day of DAYS_IN_MONTH;">
+                <td>
+                    <button (click)="showTimes(day)"
+                        [ngClass]="{'weekend' : day.danPoRedu ==='Subota' || day.danPoRedu === 'Nedelja', 'day': day.danPoRedu != 'Subota'}">
+                        {{day.redniBroj}}. {{day.danPoRedu}}
+                    </button>
+                    <button style="background-color:white">
+                        dasdasdfsdffs
+                    </button>
+                </td>
+            </tr>
+        </table>
+        <div *ngIf="selectedDay">
+            {{selectedDay | json}}
+        </div>
+    </div>
+</div>

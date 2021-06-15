@@ -3,25 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { StartPageComponent } from './start-page/start-page.component';
-import { AddEntityComponent } from './add-entity/add-entity.component';
-
+import { FormControl, FormGroup } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CalendarComponent } from './calendar/calendar.component';
 @NgModule({
   declarations: [
-    AppComponent,
-    StartPageComponent,
-    AddEntityComponent
-    
 
-  ],
+    AppComponent,
+    CalendarComponent,],
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule, 
-    ReactiveFormsModule, NgbModule
-   
+    AppRoutingModule,
+    ReactiveFormsModule, 
+    NgbModule,
+    
+
 
   ],
   providers: [],

@@ -1,0 +1,16 @@
+.content{
+    margin: 15px;
+}
+table,td,tr,th{
+    width: 400px;
+}
+.day{
+    width: 100%;
+}
+.weekend{
+    width: 100%;
+    background-color: saddlebrown;
+}
+.container {
+    display: flex; /* or inline-flex */
+  }
